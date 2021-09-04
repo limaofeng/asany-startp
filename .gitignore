@@ -4,7 +4,6 @@ node_modules
 .cache
 dist
 storybook-static
-public
 assets
 .yarn/*
 !.yarn/releases

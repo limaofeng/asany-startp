@@ -22,4 +22,4 @@ export type TeamMemberData = {
   photo: string;
   name: string;
   title: string;
-}
+};
