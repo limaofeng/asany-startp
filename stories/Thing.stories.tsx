@@ -44,7 +44,7 @@ const Template: Story<any> = ({ testing }) => {
         <IconProvider>
           <SunmaoEditor
             id="0"
-            name="测试"
+            name="测试1"
             data={{
               template: 'cn.asany.ui.theme.canvas.BasicLayout',
               blocks: [
