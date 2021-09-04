@@ -41,16 +41,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "asany-themes-canvas",
+  "name": "asany-theme-startp",
   "author": "李茂峰",
-  "module": "dist/asany-themes-canvas.esm.js",
+  "module": "dist/asany-theme-startp.esm.js",
   "size-limit": [
     {
-      "path": "dist/asany-themes-canvas.cjs.production.min.js",
+      "path": "dist/asany-theme-startp.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/asany-themes-canvas.esm.js",
+      "path": "dist/asany-theme-startp.esm.js",
       "limit": "10 KB"
     }
   ],
