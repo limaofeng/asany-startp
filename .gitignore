@@ -1,0 +1,13 @@
+*.log
+.DS_Store
+node_modules
+.cache
+dist
+storybook-static
+public
+assets
+.yarn/*
+!.yarn/releases
+
+# example
+example/.parcel-cache
