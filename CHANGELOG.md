@@ -1,3 +1,12 @@
+## [0.1.3](https://github.com/limaofeng/asany-startp/compare/v0.1.2...v0.1.3) (2021-09-05)
+
+
+### Bug Fixes
+
+* 通过 __webpack_public_path__ 设置静态资源的 publicPath ([2bd30e1](https://github.com/limaofeng/asany-startp/commit/2bd30e1ee10aa7bee0470799b6a2ceb04d8a207c))
+
+
+
 ## [0.1.2](https://github.com/limaofeng/asany-startp/compare/v0.1.1...v0.1.2) (2021-09-05)
 
 
