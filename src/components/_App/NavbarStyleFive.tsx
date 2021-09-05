@@ -35,10 +35,12 @@ const NavbarStyleFive = () => {
       <div className="startp-nav">
         <div className="container-fluid">
           <nav className="navbar navbar-expand-md navbar-light">
-            <Link to="/it-startup">
-              <a onClick={toggleNavbar} className="navbar-brand">
-                <img src="/images/logo.png" alt="logo" />
-              </a>
+            <Link
+              to="/it-startup"
+              onClick={toggleNavbar}
+              className="navbar-brand"
+            >
+              <img src="/images/logo.png" alt="logo" />
             </Link>
 
             <button

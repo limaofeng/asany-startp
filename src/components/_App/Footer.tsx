@@ -14,9 +14,7 @@ const Footer = () => {
             <div className="single-footer-widget">
               <div className="logo">
                 <Link to="/it-startup">
-                  <a>
-                    <img src="/images/logo.png" alt="logo" />
-                  </a>
+                  <img src="/images/logo.png" alt="logo" />
                 </Link>
               </div>
               <p>公司简介, 品牌说明</p>

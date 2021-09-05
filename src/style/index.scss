@@ -1,6 +1,19 @@
 @import './style.scss';
 @import './responsive.scss';
 
+.theme-startp {
+  audio,
+  canvas,
+  embed,
+  iframe,
+  img,
+  object,
+  svg,
+  video {
+    display: inline;
+    vertical-align: middle;
+  }
+}
 .services-area-two {
   p {
     margin-bottom: 1rem;

@@ -25,7 +25,7 @@ function Services(props: ServicesProps) {
 
         <div className="row justify-content-center">
           {services.map((item) => (
-            <div className="col-lg-4 col-sm-6">
+            <div key={item.id} className="col-lg-4 col-sm-6">
               <div
                 className="single-services-box"
                 style={{ minHeight: itemMinHeight }}

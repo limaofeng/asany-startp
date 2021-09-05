@@ -1,6 +1,6 @@
 import { ILibraryDefinition, component, library } from 'sunmao';
 
-import BasicLayout from './BasicLayout';
+import Layout from './components/_App/Layout';
 
 @library({
   name: 'canvas',
@@ -9,7 +9,7 @@ import BasicLayout from './BasicLayout';
 })
 class Canvas {
   @component()
-  BasicLayout = BasicLayout;
+  BasicLayout = Layout;
 }
 
 const canvas = new Canvas();

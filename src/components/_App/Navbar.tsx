@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import * as Icon from 'react-feather';
 import classnames from 'classnames';
@@ -6,10 +6,9 @@ import classnames from 'classnames';
 import Link from '../../utils/ActiveLink';
 import { MenuData } from '../../../types';
 
-import menus from './menus.json';
-
 type NavbarProps = {
   style?: 'default' | 'fluid';
+  menus: MenuData[];
 };
 
 type NavItemProps = {
@@ -33,7 +32,7 @@ function NavItem(props: NavItemProps) {
       {isFather && (
         <ul className="dropdown-menu">
           {data.children!.map((item) => (
-            <NavItem data={item} toggleNavbar={toggleNavbar} />
+            <NavItem key={item.id} data={item} toggleNavbar={toggleNavbar} />
           ))}
         </ul>
       )}
@@ -42,25 +41,28 @@ function NavItem(props: NavItemProps) {
 }
 
 const Navbar = (props: NavbarProps) => {
-  const { style } = props;
-  //   const cart = useSelector<StartpRootState, ICart>((state) => state.cart);
+  const { style, menus } = props;
   const [menu, setMenu] = React.useState(true);
 
   const toggleNavbar = () => {
     setMenu(!menu);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     let elementId = document.getElementById('header')!;
-    document.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if (window.scrollY > 170) {
         elementId.classList.add('is-sticky');
       } else {
         elementId.classList.remove('is-sticky');
       }
-    });
+    };
+    document.addEventListener('scroll', handleScroll);
     window.scrollTo(0, 0);
-  });
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const classOne = menu
     ? 'collapse navbar-collapse'
@@ -110,12 +112,16 @@ const Navbar = (props: NavbarProps) => {
             <div className={classOne} id="navbarSupportedContent">
               <ul className="navbar-nav ms-auto menu-item mega-menu mega-menu-full sub-menu">
                 <li className="nav-item">
-                  <Link to="/#" className="nav-link" activeClassName="active">
+                  <Link to="/" className="nav-link" activeClassName="active">
                     首页 <Icon.ChevronDown />
                   </Link>
                 </li>
                 {menus.map((menu) => (
-                  <NavItem data={menu} toggleNavbar={toggleNavbar} />
+                  <NavItem
+                    key={menu.id}
+                    data={menu}
+                    toggleNavbar={toggleNavbar}
+                  />
                 ))}
               </ul>
             </div>

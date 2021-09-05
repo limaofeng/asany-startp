@@ -7,6 +7,7 @@ import { ToastProvider } from 'react-toast-notifications';
 import Layout from '../../src/components/_App/Layout';
 import { useStore } from './store';
 
+import menus from './data/menus.json';
 import services from './data/services.json';
 import blogs from './data/blogs.json';
 
@@ -21,8 +22,6 @@ import Partner from '../../src/components/DigitalAgencyPortfolio/Partner';
 import BlogPostStyleThree from '../../src/components/Common/BlogPostStyleThree';
 import CreativeArea from '../../src/components/DigitalAgencyPortfolio/CreativeArea';
 import Footer from '../../src/components/_App/Footer';
-
-import '../../src/style/index.scss';
 
 const meta: Meta = {
   title: '演示/网站',
@@ -44,7 +43,7 @@ const Template: Story<any> = (_args) => {
       >
         <Provider store={store}>
           <Layout>
-            <Navbar style="fluid" />
+            <Navbar style="fluid" menus={menus} />
             <MainBanner />
             <AboutUs />
             <Services services={services} itemMinHeight={270} />

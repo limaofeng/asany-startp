@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../style/index.scss';
+
 import GoTop from './GoTop';
 
 type LayoutProps = {
@@ -14,7 +16,7 @@ function Head({ children }: LayoutProps) {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div className="theme-startp">
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,7 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
       {children}
 
       <GoTop scrollStepInPx="100" delayInMs="10.50" />
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
-import React, { ComponentType } from 'react';
+import React from 'react';
 
-import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface ActiveLinkProps {
   to: string;
@@ -16,10 +16,8 @@ const ActiveLink = ({
   className,
   activeClassName,
   ...props
-}: ActiveLinkProps & RouteComponentProps) => {
-  const {
-    location: { pathname },
-  } = props;
+}: ActiveLinkProps) => {
+  const { pathname } = useLocation();
 
   if (pathname === props.href && activeClassName) {
     className = `${className} ${activeClassName}`.trim();
@@ -32,4 +30,4 @@ const ActiveLink = ({
   );
 };
 
-export default withRouter(ActiveLink) as ComponentType<ActiveLinkProps>;
+export default ActiveLink;

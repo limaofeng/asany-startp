@@ -58,7 +58,7 @@ function OurRecentNews(props: OurRecentNewsProps) {
             {...options}
           >
             {blogs.map((item) => (
-              <div className="single-blog-item">
+              <div key={item.id} className="single-blog-item">
                 <div className="post-image">
                   <Link to="/blog-details">
                     <img src="/images/blog-image/blog1.jpg" alt="image" />

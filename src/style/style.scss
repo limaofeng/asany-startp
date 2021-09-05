@@ -121,17 +121,6 @@ body {
 :root {
   scroll-behavior: inherit;
 }
-audio,
-canvas,
-embed,
-iframe,
-img,
-object,
-svg,
-video {
-  display: inline;
-  vertical-align: middle;
-}
 img {
   max-width: 100%;
 }

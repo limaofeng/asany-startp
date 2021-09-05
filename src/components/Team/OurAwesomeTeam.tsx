@@ -27,8 +27,8 @@ function OurAwesomeTeam(props: OurAwesomeTeamProps) {
         )}
 
         <div className="row justify-content-center">
-          {members.map(() => (
-            <div className="col-lg-3 col-md-6">
+          {members.map((item) => (
+            <div key={item.id} className="col-lg-3 col-md-6">
               <div className="single-team">
                 <div className="team-image">
                   <img src="/images/team-image/team1.jpg" alt="image" />
