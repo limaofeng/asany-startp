@@ -5,7 +5,7 @@ import BasicLayout from './BasicLayout';
 @library({
   name: 'canvas',
   description: '测试库',
-  namespace: 'cn.asany.ui.theme.canvas',
+  namespace: 'cn.asany.ui.theme.startp',
 })
 class Canvas {
   @component()

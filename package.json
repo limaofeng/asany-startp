@@ -41,16 +41,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "asany-theme-startp",
+  "name": "@asany/startp",
   "author": "李茂峰",
-  "module": "dist/asany-theme-startp.esm.js",
+  "module": "dist/startp.esm.js",
   "size-limit": [
     {
-      "path": "dist/asany-theme-startp.cjs.production.min.js",
+      "path": "dist/startp.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/asany-theme-startp.esm.js",
+      "path": "dist/startp.esm.js",
       "limit": "10 KB"
     }
   ],
