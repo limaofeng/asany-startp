@@ -1,3 +1,12 @@
+## [0.1.4](https://github.com/limaofeng/asany-startp/compare/v0.1.3...v0.1.4) (2021-09-05)
+
+
+### Bug Fixes
+
+* :bug: 修复 Banner 背景图不显示的bug ([31dc057](https://github.com/limaofeng/asany-startp/commit/31dc05767a1f2ed0e6d48f480031515416b8b278))
+
+
+
 ## [0.1.3](https://github.com/limaofeng/asany-startp/compare/v0.1.2...v0.1.3) (2021-09-05)
 
 
