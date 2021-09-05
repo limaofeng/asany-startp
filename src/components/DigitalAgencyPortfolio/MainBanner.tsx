@@ -18,6 +18,34 @@ const options = {
   ],
 };
 
+const BannerItem = function ({ item }: any) {
+  return (
+    <div
+      className="agency-portfolio-main-banner"
+      style={{
+        backgroundImage: `url(${__webpack_public_path__ + item.background}`,
+      }}
+    >
+      <div className="d-table">
+        <div className="d-table-cell">
+          <div className="container">
+            <div className="portfolio-banner-content">
+              <span className="sub-title">{item.subtitle}</span>
+              <h1>{item.title}</h1>
+              <p>{item.description}</p>
+              {item.getstarted && (
+                <a href={item.getstarted.url} className="btn btn-secondary">
+                  {item.getstarted.title || 'Get Started'}
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const MainBanner = () => {
   const [display, setDisplay] = React.useState(false);
 
@@ -27,8 +55,7 @@ const MainBanner = () => {
 
   const banners = [
     {
-      background:
-        '/images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
+      background: 'images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
       title: 'Digital Agency',
       subtitle: 'We are Creative',
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -39,8 +66,7 @@ const MainBanner = () => {
       },
     },
     {
-      background:
-        '/images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
+      background: 'images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
       title: 'UX/UI Design',
       subtitle: 'We are Digital',
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -51,8 +77,7 @@ const MainBanner = () => {
       },
     },
     {
-      background:
-        '/images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
+      background: 'images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
       title: 'Digital Marketing',
       subtitle: 'We are Agency',
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -72,32 +97,7 @@ const MainBanner = () => {
           {...options}
         >
           {banners.map((item) => (
-            <div
-              className="agency-portfolio-main-banner"
-              style={{
-                backgroundImage: __webpack_public_path__ + item.background,
-              }}
-            >
-              <div className="d-table">
-                <div className="d-table-cell">
-                  <div className="container">
-                    <div className="portfolio-banner-content">
-                      <span className="sub-title">{item.subtitle}</span>
-                      <h1>{item.title}</h1>
-                      <p>{item.description}</p>
-                      {item.getstarted && (
-                        <a
-                          href={item.getstarted.url}
-                          className="btn btn-secondary"
-                        >
-                          {item.getstarted.title || 'Get Started'}
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <BannerItem item={item} />
           ))}
         </OwlCarousel>
       )}

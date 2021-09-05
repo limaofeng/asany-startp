@@ -92,7 +92,7 @@ const Navbar = (props: NavbarProps) => {
               className="navbar-brand"
             >
               <img
-                src={`${__webpack_public_path__}/images/logo.png`}
+                src={`${__webpack_public_path__}images/logo.png`}
                 alt="logo"
               />
             </Link>

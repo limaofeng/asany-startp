@@ -19,6 +19,7 @@ export type BlogData = {
   summary: string;
   author: string;
   releaseDate: string;
+  url?: string;
 };
 
 export type TeamMemberData = {

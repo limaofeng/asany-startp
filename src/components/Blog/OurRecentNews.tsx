@@ -61,14 +61,17 @@ function OurRecentNews(props: OurRecentNewsProps) {
               <div key={item.id} className="single-blog-item">
                 <div className="post-image">
                   <Link to="/blog-details">
-                    <img src="/images/blog-image/blog1.jpg" alt="image" />
+                    <img
+                      src={`${__webpack_public_path__}images/blog-image/blog1.jpg`}
+                      alt={item.title}
+                    />
                   </Link>
                 </div>
 
                 <div className="post-content">
                   <ul className="post-meta">
                     <li>
-                      By <a href="#">{item.author}</a>
+                      By <a href={item.url}>{item.author}</a>
                     </li>
                     <li>{item.releaseDate}</li>
                   </ul>
