@@ -91,7 +91,10 @@ const Navbar = (props: NavbarProps) => {
               onClick={toggleNavbar}
               className="navbar-brand"
             >
-              <img src="/images/logo.png" alt="logo" />
+              <img
+                src={`${__webpack_public_path__}/images/logo.png`}
+                alt="logo"
+              />
             </Link>
 
             <button
@@ -155,20 +158,6 @@ const Navbar = (props: NavbarProps) => {
                   </div>
                 </li>
               </ul>
-              {/* <Link to="/cart">
-                                <a className="cart-wrapper-btn">
-                                    <Icon.ShoppingCart />
-                                    <span>{cart.length}</span>
-                                </a>
-                            </Link> */}
-
-              {/* <Link to="/contact">
-                                <a className="btn btn-light">Support</a>
-                            </Link> */}
-
-              {/* <Link to="/login">
-                                <a className="btn btn-primary">Login</a>
-                            </Link> */}
             </div>
           </nav>
         </div>

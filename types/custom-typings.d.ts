@@ -26,3 +26,5 @@ declare type StartpRootState = {
   cart: ICart[];
   products: IProduct[];
 };
+
+declare let __webpack_public_path__: string;

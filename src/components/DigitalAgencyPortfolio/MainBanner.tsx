@@ -25,75 +25,81 @@ const MainBanner = () => {
     setDisplay(true);
   }, []);
 
+  const banners = [
+    {
+      background:
+        '/images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
+      title: 'Digital Agency',
+      subtitle: 'We are Creative',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore.`,
+      getstarted: {
+        url: '#',
+        title: '',
+      },
+    },
+    {
+      background:
+        '/images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
+      title: 'UX/UI Design',
+      subtitle: 'We are Digital',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore.`,
+      getstarted: {
+        url: '#',
+        title: '',
+      },
+    },
+    {
+      background:
+        '/images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
+      title: 'Digital Marketing',
+      subtitle: 'We are Agency',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore.`,
+      getstarted: {
+        url: '#',
+        title: '',
+      },
+    },
+  ];
+
   return (
     <>
-      {display ? (
+      {display && (
         <OwlCarousel
           className="agency-portfolio-home-slides owl-carousel owl-theme"
           {...options}
         >
-          <div className="agency-portfolio-main-banner portfolio-banner-bg1">
-            <div className="d-table">
-              <div className="d-table-cell">
-                <div className="container">
-                  <div className="portfolio-banner-content">
-                    <span className="sub-title">We are Creative</span>
-                    <h1>Digital Agency</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore.
-                    </p>
-                    <a href="#" className="btn btn-secondary">
-                      Get Started
-                    </a>
+          {banners.map((item) => (
+            <div
+              className="agency-portfolio-main-banner"
+              style={{
+                backgroundImage: __webpack_public_path__ + item.background,
+              }}
+            >
+              <div className="d-table">
+                <div className="d-table-cell">
+                  <div className="container">
+                    <div className="portfolio-banner-content">
+                      <span className="sub-title">{item.subtitle}</span>
+                      <h1>{item.title}</h1>
+                      <p>{item.description}</p>
+                      {item.getstarted && (
+                        <a
+                          href={item.getstarted.url}
+                          className="btn btn-secondary"
+                        >
+                          {item.getstarted.title || 'Get Started'}
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="agency-portfolio-main-banner portfolio-banner-bg2">
-            <div className="d-table">
-              <div className="d-table-cell">
-                <div className="container">
-                  <div className="portfolio-banner-content">
-                    <span className="sub-title">We are Digital</span>
-                    <h1>UX/UI Design</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore.
-                    </p>
-                    <a href="#" className="btn btn-secondary">
-                      Get Started
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="agency-portfolio-main-banner portfolio-banner-bg3">
-            <div className="d-table">
-              <div className="d-table-cell">
-                <div className="container">
-                  <div className="portfolio-banner-content">
-                    <span className="sub-title">We are Agency</span>
-                    <h1>Digital Marketing</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore.
-                    </p>
-                    <a href="#" className="btn btn-secondary">
-                      Get Started
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </OwlCarousel>
-      ) : (
-        ''
       )}
     </>
   );
