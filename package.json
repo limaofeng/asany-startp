@@ -43,6 +43,7 @@
   },
   "name": "@asany/startp",
   "author": "李茂峰",
+  "repository": "https://github.com/limaofeng/asany-startp",
   "module": "dist/startp.esm.js",
   "size-limit": [
     {
@@ -54,6 +55,19 @@
       "limit": "10 KB"
     }
   ],
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "react-feather": "^2.0.9",
+    "react-hook-form": "^6.15.8",
+    "react-masonry-component": "^6.3.0",
+    "react-owl-carousel3": "^2.2.5",
+    "react-redux": "^7.2.4",
+    "react-slick": "^0.28.1",
+    "react-tabs": "^3.2.2",
+    "react-toast-notifications": "^2.5.1",
+    "sweetalert2": "^11.1.4",
+    "sweetalert2-react-content": "^4.1.1"
+  },
   "devDependencies": {
     "@apollo/client": "^3.4.10",
     "@asany/editor": "^0.2.6",
@@ -106,6 +120,10 @@
     "tslib": "^2.3.1",
     "typescript": "^4.4.2"
   },
+  "resolutions": {
+    "**/@typescript-eslint/eslint-plugin": "^4.1.1",
+    "**/@typescript-eslint/parser": "^4.1.1"
+  },
   "jest": {
     "verbose": true,
     "moduleNameMapper": {
@@ -115,22 +133,5 @@
     "setupFiles": [
       "<rootDir>/test/globals-test.ts"
     ]
-  },
-  "dependencies": {
-    "animate.css": "^4.1.1",
-    "react-feather": "^2.0.9",
-    "react-hook-form": "^6.15.8",
-    "react-masonry-component": "^6.3.0",
-    "react-owl-carousel3": "^2.2.5",
-    "react-redux": "^7.2.4",
-    "react-slick": "^0.28.1",
-    "react-tabs": "^3.2.2",
-    "react-toast-notifications": "^2.5.1",
-    "sweetalert2": "^11.1.4",
-    "sweetalert2-react-content": "^4.1.1"
-  },
-  "resolutions": {
-    "**/@typescript-eslint/eslint-plugin": "^4.1.1",
-    "**/@typescript-eslint/parser": "^4.1.1"
   }
 }
