@@ -2,6 +2,8 @@ import React from 'react';
 
 import OwlCarousel from 'react-owl-carousel3';
 
+import { BannerData } from '../../../types';
+
 const options = {
   loop: true,
   nav: true,
@@ -18,7 +20,7 @@ const options = {
   ],
 };
 
-const BannerItem = function ({ item }: any) {
+const Banner = function ({ item }: { item: BannerData }) {
   return (
     <div
       className="agency-portfolio-main-banner"
@@ -46,48 +48,17 @@ const BannerItem = function ({ item }: any) {
   );
 };
 
-const MainBanner = () => {
+type PortfolioProps = {
+  banners: BannerData[];
+};
+
+const HeroCarousel = (props: PortfolioProps) => {
+  const { banners } = props;
   const [display, setDisplay] = React.useState(false);
 
   React.useEffect(() => {
     setDisplay(true);
   }, []);
-
-  const banners = [
-    {
-      background: 'images/agency-portfolio-main-banner/ap-main-banner-img1.jpg',
-      title: 'Digital Agency',
-      subtitle: 'We are Creative',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore.`,
-      getstarted: {
-        url: '#',
-        title: '',
-      },
-    },
-    {
-      background: 'images/agency-portfolio-main-banner/ap-main-banner-img2.jpg',
-      title: 'UX/UI Design',
-      subtitle: 'We are Digital',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore.`,
-      getstarted: {
-        url: '#',
-        title: '',
-      },
-    },
-    {
-      background: 'images/agency-portfolio-main-banner/ap-main-banner-img3.jpg',
-      title: 'Digital Marketing',
-      subtitle: 'We are Agency',
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore.`,
-      getstarted: {
-        url: '#',
-        title: '',
-      },
-    },
-  ];
 
   return (
     <>
@@ -97,7 +68,7 @@ const MainBanner = () => {
           {...options}
         >
           {banners.map((item) => (
-            <BannerItem item={item} />
+            <Banner item={item} />
           ))}
         </OwlCarousel>
       )}
@@ -105,4 +76,4 @@ const MainBanner = () => {
   );
 };
 
-export default MainBanner;
+export default HeroCarousel;

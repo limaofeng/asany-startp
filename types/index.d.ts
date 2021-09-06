@@ -22,6 +22,18 @@ export type BlogData = {
   url?: string;
 };
 
+export type BannerData = {
+  id: string;
+  background: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  getstarted?: {
+    url: string;
+    title: string;
+  };
+};
+
 export type TeamMemberData = {
   id: string;
   photo: string;

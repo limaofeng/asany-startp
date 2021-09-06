@@ -10,12 +10,13 @@ import { useStore } from './store';
 import menus from './data/menus.json';
 import services from './data/services.json';
 import blogs from './data/blogs.json';
+import banners from './data/banners.json';
 
 import Navbar from '../../src/components/_App/Navbar';
 import AboutUs from '../../src/components/AboutUs';
 import Services from '../../src/components/Services';
 import OurRecentNews from '../../src/components/Blog/OurRecentNews';
-import MainBanner from '../../src/components/DigitalAgencyPortfolio/MainBanner';
+import HeroCarousel from '../../src/components/Hero/HeroCarousel';
 import Cta from '../../src/components/IOT/Cta';
 import FeedbackStyleFive from '../../src/components/Common/FeedbackStyleFive';
 import Partner from '../../src/components/DigitalAgencyPortfolio/Partner';
@@ -44,7 +45,7 @@ const Template: Story<any> = (_args) => {
         <Provider store={store}>
           <Layout>
             <Navbar style="fluid" menus={menus} />
-            <MainBanner />
+            <HeroCarousel banners={banners} />
             <AboutUs />
             <Services services={services} itemMinHeight={270} />
             <OurRecentNews blogs={blogs} title="新闻动态" />
