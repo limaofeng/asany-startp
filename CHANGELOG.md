@@ -1,3 +1,12 @@
+## [0.1.6](https://github.com/limaofeng/asany-startp/compare/v0.1.5...v0.1.6) (2021-09-06)
+
+
+### Bug Fixes
+
+* 为 HeroCarousel 添加导出 ([10a763b](https://github.com/limaofeng/asany-startp/commit/10a763b604bfdd8e853eeaa920aedf8e2674642d))
+
+
+
 ## [0.1.5](https://github.com/limaofeng/asany-startp/compare/v0.1.4...v0.1.5) (2021-09-06)
 
 
