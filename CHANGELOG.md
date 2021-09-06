@@ -1,3 +1,12 @@
+## [0.1.5](https://github.com/limaofeng/asany-startp/compare/v0.1.4...v0.1.5) (2021-09-06)
+
+
+### Features
+
+* 添加单独的 HeroCarousel 组件 ([90ecbf4](https://github.com/limaofeng/asany-startp/commit/90ecbf46b4eebe6cf7112f0865a7eda59b28fd66))
+
+
+
 ## [0.1.4](https://github.com/limaofeng/asany-startp/compare/v0.1.3...v0.1.4) (2021-09-05)
 
 
